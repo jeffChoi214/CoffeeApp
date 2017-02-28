@@ -72,7 +72,7 @@
                             border-top-left-radius: 0;
                             border-top-right-radius: 0; "
                         />
-                        <button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login" type="Submit">Login</button>
+                        <button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login" type="Submit" style="margin-bottom:2px">Login</button>
                         <div class="text-center">
                         <a href="register"><h3><b>Register Here</b></h3></a>
                         </div>
