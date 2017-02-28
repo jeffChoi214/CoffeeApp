@@ -28,11 +28,10 @@
                                           color: white;
                                           text-shadow: black 0.3em 0.3em 0.3em;
                                           height: 100vh;">
-        <h1>REGISTER HEREHRLKSJF</h1>
         <div class = "container">
             <div class="wrapper" style="margin-top: 80px;
                                      margin-bottom: 20px;">
-                <form action="/" method="post" name="register" class="form-signin" style="max-width: 420px;
+                <form:form action="registered" method="post" name="register" class="form-signin" style="max-width: 420px;
                               padding: 30px 38px 66px;
                               margin: 0 auto;
                               background-color: #eee;
@@ -41,7 +40,7 @@
                                 ">
                     <h3 class="form-signin-heading" style="text-align:center;
                                                           margin-bottom: 30px;">
-                        Please Sign In</h3>
+                        Registration</h3>
                     <hr class="colorgraph" style="height: 7px;
                       border-top: 0;
                       background: #c4e17f;
@@ -51,15 +50,21 @@
                       background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
                       background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
                         "><br>
-
-                    <input type="text" class="form-control" name="FName" placeholder="First Name" required="" autofocus="" style="position: relative;
+                    <form:input type="text" class="form-control" name="UserName" placeholder="Username" required="" autofocus="" style="position: relative;
                                   font-size: 16px;
                                   height: auto;
                                   padding: 10px;
                                   margin-bottom: 0px;
                                   border-bottom-left-radius: 0;
                                   border-bottom-right-radius: 0;"/>
-                    <input type="text" class="form-control" name="LName" placeholder="Last Name" required=""
+                    <form:input type="text" class="form-control" name="FName" placeholder="First Name" required="" autofocus="" style="position: relative;
+                                  font-size: 16px;
+                                  height: auto;
+                                  padding: 10px;
+                                  margin-bottom: 0px;
+                                  border-bottom-left-radius: 0;
+                                  border-bottom-right-radius: 0;"/>
+                    <form:input type="text" class="form-control" name="LName" placeholder="Last Name" required=""
                            style="position: relative;
                             font-size: 16px;
                             height: auto;
@@ -68,7 +73,7 @@
                             border-top-left-radius: 0;
                             border-top-right-radius: 0; "
                     />
-                    <input type="text" class="form-control" name="dob" placeholder="DoB" required=""
+                    <form:input type="text" class="form-control" name="dob" placeholder="DoB" required=""
                            style="position: relative;
                             font-size: 16px;
                             height: auto;
@@ -77,7 +82,7 @@
                             border-top-left-radius: 0;
                             border-top-right-radius: 0; "
                     />
-                    <input type="password" class="form-control" name="Password" placeholder="Password" required=""
+                    <form:input type="password" class="form-control" name="Password" placeholder="Password" required=""
                            style="position: relative;
                             font-size: 16px;
                             height: auto;
@@ -86,9 +91,9 @@
                             border-top-left-radius: 0;
                             border-top-right-radius: 0; "
                     />
-                    <button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login" type="Submit">Register</button>
+                    <button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login" type="Submit" action="registered">Register</button>
                     <div class="text-center"><a href="/"><h3><b>Go Back</b></h3></a></div>
-                </form>
+                </form:form>
 
 
     </div>
