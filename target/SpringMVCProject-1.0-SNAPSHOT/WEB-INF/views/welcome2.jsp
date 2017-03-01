@@ -34,15 +34,33 @@
                 ${welcome}
             </h1>
 
+            <hr>
+            <br>
+            <div class="text-center"><h2>insert table here</h2></div>
 
-            <h2>insert table here</h2>
+            <div style="color:white">
+                <table class="table table-hover">
+                    <tr>
+                        <th>Product</th>
+                        <th>Type</th>
+                        <th>Price</th>
+                    </tr>
+                     <c:forEach var="listValue" items="${message}">
+                         <tr>
+                         <td>${listValue.name}</td>
+                         <td>${listValue.price}</td>
+                         </tr>
+                    </c:forEach>
+                </table>
+            </div>
+            <!--
             <ul>
                 <c:forEach var="listValue" items="${message}">
                     <li>${listValue.name}</li>
                 </c:forEach>
             </ul>
 
-
+            -->
         </div>
     </div>
 </div>
