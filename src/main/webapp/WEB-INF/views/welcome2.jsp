@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: kamel
@@ -30,11 +31,16 @@
         <div class="jumbotron" style="background-color:rgba(0, 0, 0, 0.6);
                     height: 100%">
             <h1>
-                ${message}
+                ${welcome}
             </h1>
 
 
             <h2>insert table here</h2>
+            <ul>
+                <c:forEach var="listValue" items="${message}">
+                    <li>${listValue.name}</li>
+                </c:forEach>
+            </ul>
 
 
         </div>

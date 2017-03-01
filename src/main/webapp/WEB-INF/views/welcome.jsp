@@ -8,6 +8,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
     <title>Coffee Shop</title>
@@ -45,7 +46,7 @@
                                 ">
                         <h3 class="form-signin-heading" style="text-align:center;
                                                           margin-bottom: 30px;">
-                                Please Sign In</h3>
+                                ${message}</h3>
                         <hr class="colorgraph" style="height: 7px;
                       border-top: 0;
                       background: #c4e17f;
@@ -56,7 +57,7 @@
                       background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
                         "><br>
 
-                        <input type="text" class="form-control" name="FName" placeholder="Username" required="" autofocus="" style="position: relative;
+                        <input type="text" class="form-control" name="UserName" placeholder="Username" required="" autofocus="" style="position: relative;
                                   font-size: 16px;
                                   height: auto;
                                   padding: 10px;
@@ -79,9 +80,6 @@
                     </form>
                 </div>
             </div>
-
-
-
         </div>
     </div>
 

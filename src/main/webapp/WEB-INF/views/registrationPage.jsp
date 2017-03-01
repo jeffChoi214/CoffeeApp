@@ -31,7 +31,7 @@
         <div class = "container">
             <div class="wrapper" style="margin-top: 80px;
                                      margin-bottom: 20px;">
-                <form:form action="registered" method="post" name="register" class="form-signin" style="max-width: 420px;
+                <form action="registered" method="post" name="register" class="form-signin" style="max-width: 420px;
                               padding: 30px 38px 66px;
                               margin: 0 auto;
                               background-color: #eee;
@@ -50,21 +50,21 @@
                       background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
                       background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
                         "><br>
-                    <form:input type="text" class="form-control" name="UserName" placeholder="Username" required="" autofocus="" style="position: relative;
+                    <input type="text" class="form-control" name="UserName" placeholder="Username" required="" autofocus="" style="position: relative;
                                   font-size: 16px;
                                   height: auto;
                                   padding: 10px;
                                   margin-bottom: 0px;
                                   border-bottom-left-radius: 0;
                                   border-bottom-right-radius: 0;"/>
-                    <form:input type="text" class="form-control" name="FName" placeholder="First Name" required="" autofocus="" style="position: relative;
+                    <input type="text" class="form-control" name="FName" placeholder="First Name" required="" autofocus="" style="position: relative;
                                   font-size: 16px;
                                   height: auto;
                                   padding: 10px;
                                   margin-bottom: 0px;
                                   border-bottom-left-radius: 0;
                                   border-bottom-right-radius: 0;"/>
-                    <form:input type="text" class="form-control" name="LName" placeholder="Last Name" required=""
+                    <input type="text" class="form-control" name="LName" placeholder="Last Name" required=""
                            style="position: relative;
                             font-size: 16px;
                             height: auto;
@@ -73,7 +73,7 @@
                             border-top-left-radius: 0;
                             border-top-right-radius: 0; "
                     />
-                    <form:input type="text" class="form-control" name="dob" placeholder="DoB" required=""
+                    <input type="text" class="form-control" name="dob" placeholder="DoB" required=""
                            style="position: relative;
                             font-size: 16px;
                             height: auto;
@@ -82,7 +82,7 @@
                             border-top-left-radius: 0;
                             border-top-right-radius: 0; "
                     />
-                    <form:input type="password" class="form-control" name="Password" placeholder="Password" required=""
+                    <input type="password" class="form-control" name="Password" placeholder="Password" required=""
                            style="position: relative;
                             font-size: 16px;
                             height: auto;
@@ -93,7 +93,7 @@
                     />
                     <button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login" type="Submit" action="registered">Register</button>
                     <div class="text-center"><a href="/"><h3><b>Go Back</b></h3></a></div>
-                </form:form>
+                </form>
 
 
     </div>
