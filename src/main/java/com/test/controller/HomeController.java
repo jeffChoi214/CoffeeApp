@@ -66,51 +66,54 @@ public class HomeController {
         String url = "jdbc:mysql://localhost:3306/CoffeeApp";
         String userName = "CoffeeUser";
         String password = "coffeepassword";
-        String boyko = UserName;
         String query = "SELECT * FROM Products";
-        String qry = "SELECT * FROM USERS";
+        String theQuery = "SELECT * FROM USERS WHERE ID = ?";
 
 
         Class.forName("com.mysql.jdbc.Driver");
 
         Connection con = DriverManager.getConnection(url, userName, password);
-        Connection con2 = DriverManager.getConnection(url, userName, password);
+        Connection conn = DriverManager.getConnection(url, userName, password);
         Statement st = con.createStatement();
-        Statement stt = con2.createStatement();
 
         ResultSet rs = st.executeQuery(query);
-        ResultSet rss = stt.executeQuery(qry);
 
         ArrayList<Products> productsList = new ArrayList<Products>();
-        ArrayList<Users> usersList = new ArrayList<Users>();
         ModelAndView model;
         model = new ModelAndView("welcome", "message", "WRONG INFO");
         while (rs.next()) {
             Products temp = new Products(rs.getString("ProductID"), rs.getString("name"), rs.getString("price"));
             productsList.add(temp);
         }
-        while (rss.next()) {
-            System.out.println(rss.getString("ID"));
-            if (rss.getString("ID").equals(UserName) && rss.getString("password").equals(Password)) {
-                model = new ModelAndView("welcome2", "welcome", "Welcome " + rss.getString("FName"));
+
+        rs.close();
+        st.close();
+        con.close();
+
+        try {
+            PreparedStatement ps = conn.prepareStatement(theQuery);
+            ps.setString(1, UserName);
+
+            ResultSet rsss = ps.executeQuery();
+
+            while (rsss.next()) {
+                System.out.println("HELFJALFIJ");
+                System.out.println(UserName);
+                System.out.println(rsss.getString("FName"));
+                System.out.println(rsss.getString("LName"));
+                model = new ModelAndView("welcome2", "welcome", "Welcome " + rsss.getString("FName"));
                 model.addObject("message", productsList);
             }
+
+            rsss.close();
         }
-        /*
-        while (rss.next()) {
-            Users temp = new Users(rs.getString("ID"), rs.getString("FName"), rs.getString("LName"), rs.getString("dob"), rs.getString("password"));
-            usersList.add(temp);
-            if (temp.getID().equals(UserName) && temp.getPassword().equals(password)) {
-                st.close();
-                stt.close();
-                con.close();
-                return new ModelAndView("welcome2", "message", productsList);
-            }
+        catch (SQLException se)
+        {
+            // log exception;
+            throw se;
         }
-        */
-        st.close();
-        stt.close();
-        con.close();
+
+        conn.close();
         return model;
     }
 

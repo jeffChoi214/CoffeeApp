@@ -38,21 +38,19 @@
             <br>
             <div class="text-center"><h2>insert table here</h2></div>
 
-            <div style="color:white">
-                <table class="table table-hover">
-                    <tr>
-                        <th>Product</th>
-                        <th>Type</th>
-                        <th>Price</th>
-                    </tr>
-                     <c:forEach var="listValue" items="${message}">
-                         <tr>
-                         <td>${listValue.name}</td>
-                         <td>${listValue.price}</td>
-                         </tr>
-                    </c:forEach>
-                </table>
-            </div>
+            <table class="table table-hover">
+                <tr>
+                    <th>Product</th>
+                    <th>Type</th>
+                    <th>Price</th>
+                </tr>
+                 <c:forEach var="listValue" items="${message}">
+                     <tr>
+                     <td>${listValue.name}</td>
+                     <td>${listValue.price}</td>
+                     </tr>
+                </c:forEach>
+            </table>
             <!--
             <ul>
                 <c:forEach var="listValue" items="${message}">
